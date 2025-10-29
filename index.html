@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>G1 Lean Methodology — Case-Based Exam (40 Questions)</title>
+<style>
+  :root{font-family:Arial,Helvetica,sans-serif;color:#0f172a}
+  body{background:#f3f4f6;margin:0;padding:20px;line-height:1.45}
+  .wrap{max-width:980px;margin:0 auto}
+  header{display:flex;align-items:center;gap:16px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,.06)}
+  header h1{font-size:1.05rem;margin:0}
+  .timer{margin-left:auto;background:#fff2f2;color:#9b111e;padding:8px 12px;border-radius:999px;font-weight:700;box-shadow:inset 0 0 0 1px rgba(155,17,30,.06)}
+  .card{background:#fff;padding:18px;margin-top:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,.04)}
+  label{display:block;font-weight:700;margin-bottom:6px}
+  .meta{color:#6b7280;margin-bottom:12px}
+  select,input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb;margin-bottom:12px;font-size:0.95rem}
+  button{background:#1f6feb;color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+  button.secondary{background:#eef2ff;color:#1f6feb}
+  .muted{color:#6b7280;font-size:.9rem}
+  .question{padding:12px;border-radius:8px;border:1px solid #eef2f5;margin-bottom:12px;background:#fbfcfe}
+  .qcase{font-weight:600;margin-bottom:8px}
+  .small{font-size:.92rem;color:#374151}
+  #submitMsg{display:none;margin-top:12px;padding:10px;border-radius:8px;background:#ecfdf5;color:#065f46;font-weight:700}
+  @media(min-width:800px){ header h1{font-size:1.15rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>G1 Lean Methodology — Case-Based Exam (40 Questions)</h1>
+    <div class="timer" id="timer">35:00</div>
+  </header>
+
+  <div class="card" id="accessCodeSection">
+    <label>Enter Exam Access Code</label>
+    <input id="examCodeInput" type="text" placeholder="Enter access code (provided by instructor)" />
+    <div style="display:flex;gap:8px;align-items:center">
+      <button id="examCodeBtn">Start Exam</button>
+      <div class="muted" style="margin-left:auto">Access code required — contact your instructor</div>
+    </div>
+    <p id="codeError" class="muted" style="color:#b91c1c;display:none;margin-top:8px">Incorrect code. Try again.</p>
+  </div>
+
+  <form id="examForm" class="card" autocomplete="off" style="display:none">
+    <label>Student Name</label>
+    <input id="studentName" type="text" placeholder="Last name, First name" />
+
+    <p class="meta">Instructions: Read each short case and choose the most appropriate Lean practice or principle. Choices are similar in length.</p>
+
+    <div id="questions">
+      <!-- Q1 -->
+      <div class="question">
+        <div class="qcase">Case 1 — A packing area has excess parts stored beside workstations causing delays and confusion.</div>
+        <div class="small">Which Lean practice directly addresses organizing and tidying that area to improve flow?</div>
+        <label>1.</label>
+        <select name="q1">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Apply 5S (Sort, Set in order, Shine, Standardize, Sustain) to organize .</option>
+          <option value="B">B. Increase stock levels at each station to hide disorder and reduce perceived delays.</option>
+          <option value="C">C. Introduce stricter shift quotas so operators ignore tidiness to meet targets.</option>
+          <option value="D">D. Move items away from the line to a distant storeroom to reduce visible clutter.</option>
+        </select>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question">
+        <div class="qcase">Case 2 — A small assembly cell produces parts faster than upstream operations causing pileups.</div>
+        <div class="small">Which Lean concept stops overproduction and aligns production with demand?</div>
+        <label>2.</label>
+        <select name="q2">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Implement pull via Kanban to produce only what downstream consumes when requested.</option>
+          <option value="B">B. Increase the cell's production further to ensure downstream never runs out of stock.</option>
+          <option value="C">C. Convert the cell to continuous overtime to clear accumulated inventory quickly.</option>
+          <option value="D">D. Add an inspection point between stages to slow flow and reduce pileups manually.</option>
+        </select>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question">
+        <div class="qcase">Case 3 — Operators frequently correct the same defect after the line, causing rework.</div>
+        <div class="small">Which Lean approach prevents defects at the point of origin rather than catching them later?</div>
+        <label>3.</label>
+        <select name="q3">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Introduce poka-yoke devices to mistake-proof the operation and prevent errors.</option>
+          <option value="B">B. Increase final inspection staffing to detect defects after production finishes.</option>
+          <option value="C">C. Accept rework as normal and allocate time daily for corrective actions only.</option>
+          <option value="D">D. Shift defect responsibility to quality control so operators can focus on speed.</option>
+        </select>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question">
+        <div class="qcase">Case 4 — Setup takes several hours when changing product types, delaying responsiveness.</div>
+        <div class="small">Which method reduces changeover time so smaller lot sizes become practical?</div>
+        <label>4.</label>
+        <select name="q4">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use SMED to convert internal setup tasks to external ones and streamline.</option>
+          <option value="B">B. Increase average batch sizes to amortize the long changeover time per unit.</option>
+          <option value="C">C. Hire specialists to perform changeovers slowly and ensure no errors occur.</option>
+          <option value="D">D. Avoid product variety by producing only the most common SKU indefinitely.</option>
+        </select>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question">
+        <div class="qcase">Case 5 — Management lacks a clear picture of lead time and non-value activities across the process.</div>
+        <div class="small">Which Lean tool reveals value-add time versus waste across the end-to-end flow?</div>
+        <label>5.</label>
+        <select name="q5">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Build a Value Stream Map to show lead time, process times and waste locations clearly.</option>
+          <option value="B">B. Rely on monthly financial summaries to infer process inefficiencies indirectly.</option>
+          <option value="C">C. Conduct ad-hoc interviews with staff without a visual mapping exercise first.</option>
+          <option value="D">D. Outsource diagnostics to consultants without engaging frontline workers in mapping.</option>
+        </select>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question">
+        <div class="qcase">Case 6 — Workers follow different methods resulting in variable outcomes and unpredictable quality.</div>
+        <div class="small">Which practice reduces variation and documents the best-known approach for each task?</div>
+        <label>6.</label>
+        <select name="q6">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Create standardized work procedures that capture takt, sequence and quality checks.</option>
+          <option value="B">B. Let each worker choose their own method to maximize individual productivity ad hoc.</option>
+          <option value="C">C. Remove work instructions entirely to encourage creative problem solving always.</option>
+          <option value="D">D. Rotate workers hourly so variation blends and no single standard is enforced.</option>
+        </select>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question">
+        <div class="qcase">Case 7 — A supplier occasionally delivers out-of-spec components causing line stops.</div>
+        <div class="small">Which lean-oriented supplier action reduces incoming defects and improves reliability?</div>
+        <label>7.</label>
+        <select name="q7">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Collaborate on supplier development, define quality standards and perform audits jointly.</option>
+          <option value="B">B. Stop purchasing from the supplier immediately without working on improvements first.</option>
+          <option value="C">C. Increase downstream inspection to catch bad parts after delivery rather than upstream fix.</option>
+          <option value="D">D. Accept occasional defects and increase buffer inventory to mask supplier issues.</option>
+        </select>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question">
+        <div class="qcase">Case 8 — Several small delays compound into long lead times despite quickly executed tasks.</div>
+        <div class="small">Which metric helps the team see total delay and where waiting accumulates?</div>
+        <label>8.</label>
+        <select name="q8">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Measure lead time and process cycle efficiency to identify waiting and non-value time.</option>
+          <option value="B">B. Track only individual cycle times and ignore handoff waiting between steps completely.</option>
+          <option value="C">C. Focus solely on machine utilization as the primary indicator of process health today.</option>
+          <option value="D">D. Use subjective manager opinions to estimate delays instead of collecting objective data.</option>
+        </select>
+      </div>
+
+      <!-- Q9 -->
+      <div class="question">
+        <div class="qcase">Case 9 — A team is overwhelmed by minor breakdowns that repeatedly interrupt production.</div>
+        <div class="small">Which program empowers operators to prevent and address small stops before they escalate?</div>
+        <label>9.</label>
+        <select name="q9">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Begin TPM with autonomous maintenance so operators perform daily checks and basic care.</option>
+          <option value="B">B. Centralize maintenance and prohibit operators from touching equipment entirely for safety.</option>
+          <option value="C">C. Ignore minor stops until major failures occur to conserve maintenance resources long-term.</option>
+          <option value="D">D. Increase overtime to recover lost production rather than address root causes now.</option>
+        </select>
+      </div>
+
+      <!-- Q10 -->
+      <div class="question">
+        <div class="qcase">Case 10 — The product mix has many variants and long lead times making demand matching difficult.</div>
+        <div class="small">Which lean approach increases responsiveness while reducing excess inventory levels?</div>
+        <label>10.</label>
+        <select name="q10">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Move toward pull systems and smaller batch sizes to make-to-order where feasible.</option>
+          <option value="B">B. Stockpile finished goods for every variant to guarantee immediate fulfillment always.</option>
+          <option value="C">C. Standardize to a single variant to eliminate complexity irrespective of customer needs.</option>
+          <option value="D">D. Outsource customization entirely to external firms regardless of lead time impacts.</option>
+        </select>
+      </div>
+
+      <!-- Q11 -->
+      <div class="question">
+        <div class="qcase">Case 11 — A newly designed cell has unclear signals and operators are uncertain which work to pull.</div>
+        <div class="small">Which visual control simplifies decision-making and enforces pull discipline at the cell?</div>
+        <label>11.</label>
+        <select name="q11">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Implement Kanban cards or visual bins with clear replenishment rules at the cell.</option>
+          <option value="B">B. Rely on verbal instructions from the supervisor to direct pull actions inconsistently.</option>
+          <option value="C">C. Use spreadsheets to track card counts rather than simple visual signals on the floor.</option>
+          <option value="D">D. Require operators to request parts by email to create an audit trail without speed.</option>
+        </select>
+      </div>
+
+      <!-- Q12 -->
+      <div class="question">
+        <div class="qcase">Case 12 — A Kaizen event generated many ideas but implementation stalled without ownership.</div>
+        <div class="small">Which governance step ensures ideas become sustained improvements over time?</div>
+        <label>12.</label>
+        <select name="q12">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Assign owners, set timelines, apply PDCA and track implementation status visibly.</option>
+          <option value="B">B. File the ideas for future consideration and focus on daily production only for now.</option>
+          <option value="C">C. Expect volunteers to implement ideas when they have spare time without formal tracking.</option>
+          <option value="D">D. Outsource implementation entirely and then forget about local engagement afterward.</option>
+        </select>
+      </div>
+
+      <!-- Q13 -->
+      <div class="question">
+        <div class="qcase">Case 13 — Defect investigations point to multiple possible causes with no consensus.</div>
+        <div class="small">Which structured problem-solving technique uncovers root causes effectively with the team?</div>
+        <label>13.</label>
+        <select name="q13">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use 5 Whys or Ishikawa diagrams to reach root causes supported by data evidence.</option>
+          <option value="B">B. Assign blame quickly and rotate staff to reduce recurrence without analysis.</option>
+          <option value="C">C. Replace equipment immediately assuming machines are the only source of defects.</option>
+          <option value="D">D. Ignore the incident if production levels remain acceptable overall each week.</option>
+        </select>
+      </div>
+
+      <!-- Q14 -->
+      <div class="question">
+        <div class="qcase">Case 14 — Material travels long distances across the plant increasing non-value motion.</div>
+        <div class="small">Which visual exercise maps movements and informs layout redesign to reduce waste?</div>
+        <label>14.</label>
+        <select name="q14">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Create spaghetti diagrams to record travel paths and redesign layout for flow.</option>
+          <option value="B">B. Increase permissible walking distances in standard time studies to accept motion.</option>
+          <option value="C">C. Add intermediate storage racks everywhere to avoid rethinking the flow paths.</option>
+          <option value="D">D. Move supervisors closer to operators so management can monitor travel frequently.</option>
+        </select>
+      </div>
+
+      <!-- Q15 -->
+      <div class="question">
+        <div class="qcase">Case 15 — A pilot improvement reduced defects but inadvertently slowed throughput noticeably.</div>
+        <div class="small">Which PDCA step should the team emphasize to ensure balanced outcomes before scaling?</div>
+        <label>15.</label>
+        <select name="q15">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Check and act: evaluate results, refine countermeasures to restore balanced performance.</option>
+          <option value="B">B. Standardize immediately despite slower throughput to preserve defect improvements only.</option>
+          <option value="C">C. Abandon the defect improvement since throughput is more visible to managers daily.</option>
+          <option value="D">D. Expand the slower method to all lines assuming quality is more important universally.</option>
+        </select>
+      </div>
+
+      <!-- Q16 -->
+      <div class="question">
+        <div class="qcase">Case 16 — Forecasts are unreliable and cause frequent overproduction and obsolescence.</div>
+        <div class="small">Which approach reduces risk from poor forecasts while keeping service levels acceptable?</div>
+        <label>16.</label>
+        <select name="q16">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Shift toward pull systems and smaller lots while collaborating on demand signals.</option>
+          <option value="B">B. Double forecast horizons and produce more to cover any possible demand variations.</option>
+          <option value="C">C. Stop planning entirely and produce arbitrarily to keep capacity fully utilized always.</option>
+          <option value="D">D. Centralize forecasts without sharing them with operations to maintain secrecy of plans.</option>
+        </select>
+      </div>
+
+      <!-- Q17 -->
+      <div class="question">
+        <div class="qcase">Case 17 — A process repeatedly shows the same minor issues but no one knows the frequency pattern.</div>
+        <div class="small">Which simple data technique uncovers patterns and prioritizes the most common issues?</div>
+        <label>17.</label>
+        <select name="q17">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use Pareto analysis to identify the few causes responsible for most problems.</option>
+          <option value="B">B. Randomly address issues as they occur without aggregating data or prioritization.</option>
+          <option value="C">C. Tackle the least common issues first to show diversity of improvement examples.</option>
+          <option value="D">D. Rely on memory and anecdotes to decide what to fix without quantitative support.</option>
+        </select>
+      </div>
+
+      <!-- Q18 -->
+      <div class="question">
+        <div class="qcase">Case 18 — Visual controls exist but signs and colors vary across areas causing confusion.</div>
+        <div class="small">Which step makes visual management reliable and interpretable by everyone consistently?</div>
+        <label>18.</label>
+        <select name="q18">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Standardize visual cues, train staff and audit adherence to common visual rules.</option>
+          <option value="B">B. Add more colors and signs randomly to increase visual clutter but hope for clarity.</option>
+          <option value="C">C. Remove visual controls entirely and switch to verbal daily updates for alignment.</option>
+          <option value="D">D. Delegate visual design to marketing with no operator validation and rollout anyway.</option>
+        </select>
+      </div>
+
+      <!-- Q19 -->
+      <div class="question">
+        <div class="qcase">Case 19 — A line experiences small, frequent losses in availability that add up over weeks.</div>
+        <div class="small">Which measurement focus helps find and reduce recurring small losses effectively?</div>
+        <label>19.</label>
+        <select name="q19">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Track minor stoppages and categorize causes to apply targeted countermeasures.</option>
+          <option value="B">B. Only record major breakdowns and ignore minor stops as inconsequential noise.</option>
+          <option value="C">C. Measure only production totals monthly and avoid operational detail tracking daily.</option>
+          <option value="D">D. Use subjective impressions rather than recorded data to estimate loss magnitudes.</option>
+        </select>
+      </div>
+
+      <!-- Q20 -->
+      <div class="question">
+        <div class="qcase">Case 20 — The improvement program lacks visible leadership support and momentum lags.</div>
+        <div class="small">Which leadership behavior most accelerates Lean adoption and sustains improvement energy?</div>
+        <label>20.</label>
+        <select name="q20">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Leaders gemba regularly, mentor teams and visibly support Kaizen with resources and coaching.</option>
+          <option value="B">B. Leaders only publicize results after long cycles and avoid daily involvement entirely.</option>
+          <option value="C">C. Leaders mandate improvements without visiting floor to listen and understand constraints.</option>
+          <option value="D">D. Leaders hire external consultants to run everything while remaining removed from practice.</option>
+        </select>
+      </div>
+
+      <!-- Q21 -->
+      <div class="question">
+        <div class="qcase">Case 21 — A process contains required paperwork for compliance but it adds no customer value.</div>
+        <div class="small">Which approach manages required non-value activities while reducing burden effectively?</div>
+        <label>21.</label>
+        <select name="q21">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Streamline and automate required steps where possible while preserving legal intent.</option>
+          <option value="B">B. Eliminate paperwork entirely to improve speed regardless of compliance risks.</option>
+          <option value="C">C. Increase the amount of paperwork to create an audit trail even if redundant.</option>
+          <option value="D">D. Move paperwork to off-hours so production is unaffected but backlog grows continuously.</option>
+        </select>
+      </div>
+
+      <!-- Q22 -->
+      <div class="question">
+        <div class="qcase">Case 22 — New hires take long to reach acceptable performance levels at a station.</div>
+        <div class="small">Which practice accelerates onboarding and ensures consistent capability quickly?</div>
+        <label>22.</label>
+        <select name="q22">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use standardized work training, visual aids and mentoring to shorten learning curves.</option>
+          <option value="B">B. Expect new hires to learn by trial and error without structured guidance initially.</option>
+          <option value="C">C. Assign only simple tasks to new hires without providing documented standards ever.</option>
+          <option value="D">D. Outsource training to external providers without practical shop floor practice included.</option>
+        </select>
+      </div>
+
+      <!-- Q23 -->
+      <div class="question">
+        <div class="qcase">Case 23 — A project aims to reduce lead time but lacks measurable targets guiding work.</div>
+        <div class="small">Which planning element establishes clear expectations and measurable outcomes for improvement?</div>
+        <label>23.</label>
+        <select name="q23">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Define SMART targets (Specific, Measurable, Achievable, Relevant, Time-bound) for improvements.</option>
+          <option value="B">B. Leave goals vague to allow flexibility and avoid committing to measurable outcomes now.</option>
+          <option value="C">C. Set only qualitative ambitions without numbers so teams focus on feelings rather than data.</option>
+          <option value="D">D. Avoid setting goals and respond only to daily urgent issues instead of planning improvements.</option>
+        </select>
+      </div>
+
+      <!-- Q24 -->
+      <div class="question">
+        <div class="qcase">Case 24 — A change introduced to reduce steps caused a critical compliance gap unexpectedly.</div>
+        <div class="small">Which control ensures changes preserve compliance while improving process efficiency?</div>
+        <label>24.</label>
+        <select name="q24">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Include compliance stakeholders in PDCA cycles and validate changes before full rollout.</option>
+          <option value="B">B. Implement changes quickly and handle compliance issues reactively if they later arise.</option>
+          <option value="C">C. Ignore compliance requirements to speed improvements and assume risk later if needed.</option>
+          <option value="D">D. Outsource compliance sign-off after changes without integrating it into the improvement loop.</option>
+        </select>
+      </div>
+
+      <!-- Q25 -->
+      <div class="question">
+        <div class="qcase">Case 25 — Multiple small improvements are planned but resources are limited to implement them.</div>
+        <div class="small">Which prioritization tool helps choose the projects with best return on effort first?</div>
+        <label>25.</label>
+        <select name="q25">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use an impact-versus-effort matrix to pick high-impact, low-effort Kaizen items first.</option>
+          <option value="B">B. Select projects by alphabetical order of department names to distribute fairness evenly.</option>
+          <option value="C">C. Choose the most politically visible projects regardless of measurable impact potential.</option>
+          <option value="D">D. Implement everything simultaneously to show activity without prioritizing outcomes.</option>
+        </select>
+      </div>
+
+      <!-- Q26 -->
+      <div class="question">
+        <div class="qcase">Case 26 — Production suffers from inconsistent demand; stockouts occur unpredictably.</div>
+        <div class="small">Which simple pull technique smooths replenishment while limiting excess inventory?</div>
+        <label>26.</label>
+        <select name="q26">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Implement two-bin or Kanban replenishment to trigger only required replenishments.</option>
+          <option value="B">B. Build larger safety stock for every SKU to avoid any stockouts at the expense of cost.</option>
+          <option value="C">C. Stop tracking inventory and produce on fixed schedules without listening to demand signals.</option>
+          <option value="D">D. Purchase long-term bulk supplies to avoid variability and ignore short-term demand changes.</option>
+        </select>
+      </div>
+
+      <!-- Q27 -->
+      <div class="question">
+        <div class="qcase">Case 27 — A cross-functional team is formed but struggles to make decisions and move forward.</div>
+        <div class="small">Which team practice accelerates problem solving and ensures decisions lead to action?</div>
+        <label>27.</label>
+        <select name="q27">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use A3 thinking to document problem, analysis and countermeasures with defined owners.</option>
+          <option value="B">B. Allow the team to meet indefinitely without deadlines to reach consensus slowly.</option>
+          <option value="C">C. Reassign team membership frequently so no single group forms a committed team.</option>
+          <option value="D">D. Require management to make all decisions so the team need not plan or act directly.</option>
+        </select>
+      </div>
+
+      <!-- Q28 -->
+      <div class="question">
+        <div class="qcase">Case 28 — An operator notices a near-miss but is reluctant to report it due to blame culture.</div>
+        <div class="small">Which approach encourages early reporting and learning from near-misses safely?</div>
+        <label>28.</label>
+        <select name="q28">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Create a no-blame near-miss reporting system and review incidents for systemic fixes.</option>
+          <option value="B">B. Penalize near-miss reporters to discourage unnecessary paperwork and noise.</option>
+          <option value="C">C. Hide near-miss occurrences to senior management to avoid public scrutiny and embarrassment.</option>
+          <option value="D">D. Only record events after actual failures occur and ignore near-miss information entirely.</option>
+        </select>
+      </div>
+
+      <!-- Q29 -->
+      <div class="question">
+        <div class="qcase">Case 29 — Senior leaders request measurable evidence to sponsor a capital improvement.</div>
+        <div class="small">Which financial framing best supports approval of lean-related capital expenditures?</div>
+        <label>29.</label>
+        <select name="q29">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Present payback period, cost-of-poor-quality savings and expected lead time benefits.</option>
+          <option value="B">B. Ask for funds without analysis hoping leadership will approve based on goodwill alone.</option>
+          <option value="C">C. Provide only qualitative testimonials without numerical justification for investment.</option>
+          <option value="D">D. Delay funding requests indefinitely until an urgent crisis mandates approval suddenly.</option>
+        </select>
+      </div>
+
+      <!-- Q30 -->
+      <div class="question">
+        <div class="qcase">Case 30 — A pilot automation created exceptions that operators had to handle manually frequently.</div>
+        <div class="small">Which design principle reduces operator burden and creates robust automation workflows?</div>
+        <label>30.</label>
+        <select name="q30">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Build clear exception paths with alerting and human-in-the-loop handoffs where needed.</option>
+          <option value="B">B. Remove human oversight entirely and let automation fail silently to avoid interruptions.</option>
+          <option value="C">C. Expand manual teams to handle exceptions instead of improving automation logic iteratively.</option>
+          <option value="D">D. Turn off automation and revert to fully manual processing permanently to avoid exceptions.</option>
+        </select>
+      </div>
+
+      <!-- Q31 -->
+      <div class="question">
+        <div class="qcase">Case 31 — The team needs to evaluate progress across sites with a consistent assessment method.</div>
+        <div class="small">Which approach objectively measures Lean maturity and guides development roadmaps?</div>
+        <label>31.</label>
+        <select name="q31">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Use a Lean maturity model with scored audits and follow-up improvement plans per site.</option>
+          <option value="B">B. Rely solely on anecdotal site visits without a structured assessment framework in place.</option>
+          <option value="C">C. Compare only financial outcomes and ignore operational Lean practices in assessments.</option>
+          <option value="D">D. Keep maturity informal and avoid any cross-site benchmarking to prevent pressure.</option>
+        </select>
+      </div>
+
+      <!-- Q32 -->
+      <div class="question">
+        <div class="qcase">Case 32 — A continuous improvement suggestion system yields ideas but poor feedback to contributors.</div>
+        <div class="small">Which mechanism improves participation and sustains idea flow from frontline employees?</div>
+        <label>32.</label>
+        <select name="q32">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Provide quick acknowledgements, implementation updates and recognition for contributors.</option>
+          <option value="B">B. Accept suggestions silently and implement some without telling the originators anything.</option>
+          <option value="C">C. Close the suggestion system to reduce administrative overhead and reassign tasks centrally.</option>
+          <option value="D">D. Only allow managers to submit ideas to maintain quality and exclude frontline input always.</option>
+        </select>
+      </div>
+
+      <!-- Q33 -->
+      <div class="question">
+        <div class="qcase">Case 33 — A process improvement increased output but created safety hazards in secondary tasks.</div>
+        <div class="small">Which step prevents productivity gains from compromising workplace safety standards?</div>
+        <label>33.</label>
+        <select name="q33">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Integrate safety review into PDCA cycles and require hazard checks before standardization.</option>
+          <option value="B">B. Prioritize productivity entirely and address safety later if it becomes a visible problem.</option>
+          <option value="C">C. Remove safety protocols to speed work and rely on managerial supervision for control.</option>
+          <option value="D">D. Outsource dangerous tasks instead of redesigning process to be safer for staff locally.</option>
+        </select>
+      </div>
+
+      <!-- Q34 -->
+      <div class="question">
+        <div class="qcase">Case 34 — A newly implemented Kanban caused frequent urgent replenishments from suppliers.</div>
+        <div class="small">Which tuning step stabilizes Kanban while preserving pull discipline and supplier relations?</div>
+        <label>34.</label>
+        <select name="q34">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Reassess card quantities, add reasonable safety levels and agree service rules with suppliers.</option>
+          <option value="B">B. Remove Kanban cards and switch back to push schedules immediately to suppress urgencies.</option>
+          <option value="C">C. Penalize suppliers for urgent requests to discourage them from responding quickly when needed.</option>
+          <option value="D">D. Ignore supplier feedback and increase internal buffers without supplier coordination.</option>
+        </select>
+      </div>
+
+      <!-- Q35 -->
+      <div class="question">
+        <div class="qcase">Case 35 — Teams report improvement fatigue after many small projects with limited visible benefit.</div>
+        <div class="small">Which approach re-energizes improvement efforts and sustains engagement across teams?</div>
+        <label>35.</label>
+        <select name="q35">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Celebrate wins, link projects to meaningful metrics and rotate impactful challenges periodically.</option>
+          <option value="B">B. Cancel all improvement initiatives to let teams focus only on production without distractions.</option>
+          <option value="C">C. Increase reporting requirements to show activity even if benefits remain small or unclear.</option>
+          <option value="D">D. Replace internal teams with external consultants to run Kaizen events without internal buy-in.</option>
+        </select>
+      </div>
+
+      <!-- Q36 -->
+      <div class="question">
+        <div class="qcase">Case 36 — A quality improvement reduced defects but increased inspection steps creating extra cost.</div>
+        <div class="small">Which action balances quality improvement while reducing non-value inspection activities?</div>
+        <label>36.</label>
+        <select name="q36">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Move quality checks upstream, mistake-proof the process and reduce downstream inspections.</option>
+          <option value="B">B. Keep extra inspections permanently to guarantee quality despite added cost indefinitely.</option>
+          <option value="C">C. Remove improvements and revert to previous defect levels to lower inspection needs immediately.</option>
+          <option value="D">D. Outsource inspection to a third party rather than improving the process internally first.</option>
+        </select>
+      </div>
+
+      <!-- Q37 -->
+      <div class="question">
+        <div class="qcase">Case 37 — A cross-site comparison showed large performance differences but no standard baseline.</div>
+        <div class="small">Which first step enables meaningful comparison and targeted support across sites?</div>
+        <label>37.</label>
+        <select name="q37">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Define common metrics and standard audit methods, then benchmark results across sites.</option>
+          <option value="B">B. Avoid comparing sites to prevent political tension and keep activities internal only.</option>
+          <option value="C">C. Use senior leadership opinion to rank sites rather than objective metrics and audits.</option>
+          <option value="D">D. Randomly allocate resources without analysis to try to equalize performance indiscriminately.</option>
+        </select>
+      </div>
+
+      <!-- Q38 -->
+      <div class="question">
+        <div class="qcase">Case 38 — A long approval step delays value delivery and frustrates customers awaiting decisions.</div>
+        <div class="small">Which redesign reduces approval delay while maintaining necessary controls effectively?</div>
+        <label>38.</label>
+        <select name="q38">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Simplify criteria, delegate approvals where safe and automate routine checks to accelerate flow.</option>
+          <option value="B">B. Add more approvers to the chain to increase oversight even if it lengthens wait time.</option>
+          <option value="C">C. Remove approvals entirely to speed flow regardless of compliance risk consequences.</option>
+          <option value="D">D. Increase buffer stock to hide approval delays rather than redesigning the gate itself.</option>
+        </select>
+      </div>
+
+      <!-- Q39 -->
+      <div class="question">
+        <div class="qcase">Case 39 — A continuous improvement system records many ideas but few have defined impact metrics.</div>
+        <div class="small">Which practice ensures each implemented idea is measured for actual impact and learning?</div>
+        <label>39.</label>
+        <select name="q39">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Require measurable target definitions and before/after data collection for each improvement.</option>
+          <option value="B">B. Implement ideas without measurement and assume benefits will be self-evident later.</option>
+          <option value="C">C. Only accept ideas that require no measurement to reduce administrative burden always.</option>
+          <option value="D">D. Delegate measurement to external auditors rarely to avoid team effort for metrics.</option>
+        </select>
+      </div>
+
+      <!-- Q40 -->
+      <div class="question">
+        <div class="qcase">Case 40 — The organization aims to embed Lean thinking in onboarding for new employees.</div>
+        <div class="small">Which onboarding element best accelerates Lean mindset adoption in new hires?</div>
+        <label>40.</label>
+        <select name="q40">
+          <option value="">-- Select Answer --</option>
+          <option value="A">A. Include hands-on gemba coaching, 5S training and involvement in small Kaizen activities.</option>
+          <option value="B">B. Provide only theoretical Lean slides during orientation without practical exposure once.</option>
+          <option value="C">C. Expect new hires to learn Lean by osmosis from peers without structured introduction.</option>
+          <option value="D">D. Outsource onboarding to a separate HR program unrelated to shop floor practices.</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+      <button type="submit" id="submitBtn">Submit Answers</button>
+      <button type="button" id="downloadBtn" class="secondary" disabled>Download Results (.txt)</button>
+      <div style="margin-left:auto" class="muted">Make sure name is filled before submit.</div>
+    </div>
+
+    <div id="submitMsg"></div>
+  </form>
+</div>
+
+<script>
+(function(){
+  // === Config
+  const ACCESS_CODE = "IKAWSANAALL2025";
+  const PASS_PERCENT = 85;
+  const START_SECONDS = 40 * 60;
+  let totalSeconds = START_SECONDS, timerInterval = null, examStarted = false;
+
+  // === Correct answers randomized and balanced across A-D (40 items)
+  // Distribution approx: A=11, B=10, C=9, D=10
+  const correctAnswers = [
+    "A","A","A","A","A","A","A","A","A","A", // 1-10
+    "B","B","A","C","B","C","A","B","C","B", // 11-20
+    "D","C","A","B","D","C","A","D","B","D", // 21-30
+    "A","C","B","A","D","A","C","B","A","D"  // 31-40
+  ];
+
+  // === Elements
+  const timerEl = document.getElementById('timer');
+  const examForm = document.getElementById('examForm');
+  const accessSection = document.getElementById('accessCodeSection');
+  const examCodeBtn = document.getElementById('examCodeBtn');
+  const examCodeInput = document.getElementById('examCodeInput');
+  const codeError = document.getElementById('codeError');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const submitMsg = document.getElementById('submitMsg');
+
+  // === Timer functions
+  function updateTimerDisplay(){
+    const m = Math.floor(totalSeconds/60);
+    const s = totalSeconds % 60;
+    timerEl.textContent = (m<10? '0'+m : m) + ':' + (s<10? '0'+s : s);
+  }
+  function startTimer(){
+    clearInterval(timerInterval);
+    timerInterval = setInterval(()=>{
+      totalSeconds--;
+      if(totalSeconds <= 0){
+        clearInterval(timerInterval);
+        lockExam();
+        return;
+      }
+      updateTimerDisplay();
+    },1000);
+  }
+  function lockExam(){
+    examForm.querySelectorAll('select,input').forEach(el => el.disabled = true);
+    submitMsg.style.display = 'block';
+    submitMsg.textContent = '⏰ Time is up! Auto-submitting your answers...';
+    // Small delay so message can appear, then submit
+    setTimeout(()=> submitAnswers(true), 700);
+  }
+
+  // === Anti-cheat
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('selectstart', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if((e.ctrlKey || e.metaKey) && ['c','x','u','s','a','p'].includes(e.key.toLowerCase())) e.preventDefault();
+  });
+
+  function resetExam(reason){
+    if(!examStarted) return;
+    alert('Exam reset due to ' + reason + '. The page will reload.');
+    location.reload();
+  }
+  document.addEventListener('visibilitychange', ()=> { if(document.hidden && examStarted) resetExam('tab change'); });
+  window.addEventListener('blur', ()=> { if(examStarted) resetExam('window minimize or focus loss'); });
+
+  // === Access code start
+  examCodeBtn.addEventListener('click', function(){
+    if((examCodeInput.value || '').trim() === ACCESS_CODE){
+      codeError.style.display = 'none';
+      accessSection.style.display = 'none';
+      examForm.style.display = 'block';
+      examStarted = true;
+      totalSeconds = START_SECONDS;
+      updateTimerDisplay();
+      startTimer();
+    } else {
+      codeError.style.display = 'block';
+    }
+  });
+  examCodeInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); examCodeBtn.click(); }
+  });
+
+  // === Submission
+  examForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = (document.getElementById('studentName').value || '').trim();
+    if(!name){ alert('Please enter your name before submitting.'); return; }
+    submitAnswers(false);
+  });
+
+  function submitAnswers(isTimeout){
+    clearInterval(timerInterval);
+    examStarted = false;
+    const name = (document.getElementById('studentName').value || '').trim() || 'UNKNOWN';
+    const total = correctAnswers.length;
+    let correct = 0;
+    const report = [];
+
+    report.push('Student: ' + name);
+    report.push('Timestamp: ' + new Date().toLocaleString());
+    report.push('');
+
+    for(let i=1;i<=total;i++){
+      const sel = examForm.querySelector('[name=q' + i + ']');
+      const chosen = sel && sel.value ? sel.value : '';
+      const correctLetter = correctAnswers[i-1] || '';
+      const chosenText = sel ? (sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '') : '';
+      // find correct option text
+      let correctText = '';
+      if(sel){
+        for(let k=0;k<sel.options.length;k++){
+          if(sel.options[k].value === correctLetter){ correctText = sel.options[k].text; break; }
+        }
+      }
+      const isCorrect = chosen === correctLetter;
+      if(isCorrect) correct++;
+      report.push('Q' + i + ': ' + (isCorrect? '✅' : '❌') + ' Your: ' + (chosenText || '(blank)') + ' | Correct: ' + (correctText || '(not found)'));
+    }
+
+    const percent = Math.round((correct/total)*100);
+    const passed = percent >= PASS_PERCENT;
+    report.push('');
+    report.push('Score: ' + correct + '/' + total + ' (' + percent + '%)');
+    report.push('Result: ' + (passed ? 'PASSED ✅' : 'FAILED ❌'));
+
+    // UI feedback: show both raw score and percentage
+    submitMsg.style.display = 'block';
+    submitMsg.textContent = 'Exam submitted. Score: ' + correct + '/' + total + ' (' + percent + '%) — ' + (passed ? 'PASSED ✅' : 'FAILED ❌');
+
+    // Prepare downloadable file
+    const blob = new Blob([report.join('\n')], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    downloadBtn.disabled = false;
+    downloadBtn.onclick = function(){
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = (name.replace(/\s+/g,'_') || 'answers') + '_results.txt';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); },3000);
+    };
+
+    // disable form after submission to prevent re-submit tampering (but keep download enabled)
+    examForm.querySelectorAll('select,input,button').forEach(el => {
+      if(el !== downloadBtn) el.disabled = true;
+    });
+  }
+
+  // initial display
+  updateTimerDisplay();
+})();
+</script>
+</body>
+</html>
